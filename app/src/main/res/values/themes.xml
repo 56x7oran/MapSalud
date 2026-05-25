@@ -5,5 +5,8 @@
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
 
+    <style name="CustomBottomNavIndicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:color">@color/primary</item>
+    </style>
     <style name="Theme.TrabajoGrupalMapSalud" parent="Base.Theme.TrabajoGrupalMapSalud" />
 </resources>
