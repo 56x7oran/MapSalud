@@ -12,7 +12,20 @@
           "package_name": "ec.edu.mapsalud"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "861655205039-64rbhq16jj94nu2lqcdhrhgvbsqpkqdk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ec.edu.mapsalud",
+            "certificate_hash": "278f016dbb6675264c479212d2e0c5f551a46f78"
+          }
+        },
+        {
+          "client_id": "861655205039-e0sjvj2qsmnefevofqlr49uf8tv1tc76.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyB1T7mAD1cONqzeRDl4xGtsDa5f9wGkZYY"
@@ -20,7 +33,12 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "861655205039-e0sjvj2qsmnefevofqlr49uf8tv1tc76.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }

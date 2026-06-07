@@ -2,23 +2,12 @@ package ec.edu.mapsalud
 
 import android.content.Intent
 import android.os.Bundle
-import android.view.inputmethod.InputMethodManager
-import android.widget.Toast
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import com.chaos.view.PinView
-import com.google.android.material.button.MaterialButton
-import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.snackbar.Snackbar
-import ec.edu.mapsalud.databinding.ActivityLoginPageBinding
 import ec.edu.mapsalud.databinding.ActivitySignUpPageBinding
 import ec.edu.mapsalud.datos.FirebaseManager
-import ec.edu.mapsalud.enum.Type
-import ec.edu.mapsalud.utils.MessageManager
 
-class SignUpPage : AppCompatActivity() {
+class SignUpScreen : AppCompatActivity() {
 
     lateinit var binding: ActivitySignUpPageBinding
 
@@ -48,7 +37,7 @@ class SignUpPage : AppCompatActivity() {
         }
 
         binding.txtAlradyHaveAccount.setOnClickListener {
-            val intent = Intent(this, LoginPage::class.java)
+            val intent = Intent(this, LoginScreen::class.java)
             startActivity(intent)
             finish()
         }

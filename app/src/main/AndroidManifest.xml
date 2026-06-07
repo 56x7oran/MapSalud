@@ -15,16 +15,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TrabajoGrupalMapSalud">
         <activity
-            android:name=".SignUpPage"
+            android:name=".SignUpScreen"
             android:exported="false" />
         <activity
-            android:name=".verification_code_dialog"
+            android:name=".ForgotPasswordPage"
             android:exported="false" />
         <activity
-            android:name=".LoginPage"
+            android:name=".VerificationCodeDialog"
             android:exported="false" />
         <activity
-            android:name=".Main_Screen"
+            android:name=".LoginScreen"
+            android:exported="false" />
+        <activity
+            android:name=".MainScreen"
             android:exported="false" />
         <activity
             android:name=".SplashScreen"

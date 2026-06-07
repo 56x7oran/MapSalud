@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background_color"
-    tools:context=".LoginPage">
+    tools:context=".LoginScreen">
 
     <!-- Background Image -->
     <ImageView
@@ -251,6 +251,7 @@
                 </LinearLayout>
 
                 <!-- Google Button -->
+                <!-- Create Account -->
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/btnGoogle"
                     android:layout_width="match_parent"
@@ -262,7 +263,7 @@
                     app:icon="@drawable/ic_google"
                     app:iconGravity="textStart"
                     app:iconTint="@null" />
-                <!-- Create Account -->
+
                 <TextView
                     android:id="@+id/txtCreateAccount"
                     android:layout_width="wrap_content"
