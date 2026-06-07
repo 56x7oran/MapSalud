@@ -44,7 +44,6 @@ class ForgotPasswordScreen : AppCompatActivity() {
                     setLoadingState(false)
                     showMessage("¡Correo Enviado! Revisa tu bandeja de entrada.")
 
-                    // Delay para permitir leer el mensaje antes de cerrar la pantalla
                     binding.root.postDelayed({
                         finish()
                     }, 2000)

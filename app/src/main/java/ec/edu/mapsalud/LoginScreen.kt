@@ -45,6 +45,8 @@ class LoginScreen : AppCompatActivity() {
             } catch (e: ApiException) {
                 showMessage("Error de conexión con Google: ${e.localizedMessage}")
             }
+        } else {
+            binding.btnGoogle.isEnabled = true
         }
     }
 
@@ -57,9 +59,11 @@ class LoginScreen : AppCompatActivity() {
         initListeners()
         initVariables()
     }
+
     private fun initVariables() {
         type = Type.PATIENT
     }
+
     private fun initGoogleConfig() {
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
             .requestIdToken("861655205039-e0sjvj2qsmnefevofqlr49uf8tv1tc76.apps.googleusercontent.com")
@@ -81,6 +85,12 @@ class LoginScreen : AppCompatActivity() {
             type = Type.DOCTOR
             updateSelection()
         }
+
+        binding.btnPatient.setOnClickListener {
+            type = Type.PATIENT
+            updateSelection()
+        }
+
         binding.txtCreateAccount.setOnClickListener {
             val intent = Intent(this, SignUpScreen::class.java)
             startActivity(intent)
@@ -193,8 +203,11 @@ class LoginScreen : AppCompatActivity() {
 
 
     private fun signInWithGoogle() {
-        val signInIntent = googleSignInClient.signInIntent
-        googleSignInLauncher.launch(signInIntent)
+        binding.btnGoogle.isEnabled = false
+        googleSignInClient.signOut().addOnCompleteListener {
+            val signInIntent = googleSignInClient.signInIntent
+            googleSignInLauncher.launch(signInIntent)
+        }
     }
 
     private fun firebaseAuthWithGoogle(idToken: String) {
@@ -300,7 +313,6 @@ class LoginScreen : AppCompatActivity() {
     }
 
 
-
     private fun showMessage(message: String) {
         val snackbar = Snackbar.make(binding.root, message, Snackbar.LENGTH_LONG)
         snackbar.setBackgroundTint(getColor(R.color.black_soft))
@@ -341,9 +353,8 @@ class LoginScreen : AppCompatActivity() {
                         response: retrofit2.Response<Void>
                     ) {
                         if (response.isSuccessful) {
+                            counter = 0
                             showMessage("Email enviado correctamente")
-                        } else {
-                            showMessage("Error al enviar email: ${response.code()}")
                         }
                     }
 
