@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "861655205039",
+    "project_id": "mapsalud-2026",
+    "storage_bucket": "mapsalud-2026.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:861655205039:android:f12a23e199c3c0ceb3005a",
+        "android_client_info": {
+          "package_name": "ec.edu.mapsalud"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB1T7mAD1cONqzeRDl4xGtsDa5f9wGkZYY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

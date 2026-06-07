@@ -17,7 +17,7 @@ class SplashScreen : AppCompatActivity() {
             startActivity(Intent(this, LoginPage::class.java))
             finish()
 
-        }, 8000)
+        }, 4000)
     }
 
 }
